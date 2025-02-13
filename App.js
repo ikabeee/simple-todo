@@ -108,10 +108,9 @@ const styles = StyleSheet.create({
   },
   listItems: {
     width: '100%',
-    padding: 20,
+    padding: 10,
     backgroundColor: '#fff',
     borderRadius: 10,
-    elevation: 3,
     marginBottom: 10,
   },
   itemCard: {
@@ -119,7 +118,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: '#121254',
     alignItems: 'center',
-    padding: 20,
+    padding: 10,
     marginVertical: 8,
     width: '100%',
     alignSelf: 'center',
