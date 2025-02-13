@@ -10,7 +10,7 @@ export default App = () => {
   const addTask = () => {
     if (textTask.trim() === "") return;
     const newTask = {
-      id: Date.now().toString(),
+      id: new Date().toLocaleDateString(),
       title: textTask
     }
     setTasks([...tasks, newTask]);
@@ -27,11 +27,14 @@ export default App = () => {
     return (
       <View>
         <View style={styles.itemCard}>
-          <Text style={styles.text}>{item.title}</Text>
+          <View style={styles.containerText}>
+            <Text style={styles.text}>{item.title}</Text>
+            <Text style={styles.text}>{item.id}</Text>
+          </View>
           <TouchableOpacity
             style={styles.deleteButton}
             onPress={() => deleteTask(item.id)}>
-            <FontAwesomeIcon icon={faXmark} color="white" size={20}/>
+            <FontAwesomeIcon icon={faXmark} color="white" size={20} />
           </TouchableOpacity>
         </View>
       </View>
@@ -50,7 +53,7 @@ export default App = () => {
           onChangeText={setTextTask}
         />
         <TouchableOpacity onPress={addTask} style={styles.addButton}>
-          <FontAwesomeIcon icon={faPlus} color= 'white' size={20} />
+          <FontAwesomeIcon icon={faPlus} color='white' size={20} />
         </TouchableOpacity>
       </View>
       <Text style={styles.title}>My To Do List</Text>
@@ -75,6 +78,9 @@ const styles = StyleSheet.create({
   text: {
     color: 'white',
     fontSize: 16,
+  },
+  containerText:{
+    flex: 1,
   },
   container: {
     flex: 1,
