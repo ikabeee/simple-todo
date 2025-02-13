@@ -3,7 +3,6 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, FlatList, Keyboard } from "react-native";
-import { text } from "@fortawesome/fontawesome-svg-core";
 
 export default App = () => {
   const [textTask, setTextTask] = useState('');

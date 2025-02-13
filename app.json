@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "rams-landing",
-    "slug": "rams-landing",
+    "name": "simple-to-do-app",
+    "slug": "simple-to-do-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
